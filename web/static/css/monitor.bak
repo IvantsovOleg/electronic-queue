@@ -1,0 +1,388 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, audio, canvas, details, figcaption, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, summary, time, video {
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    line-height: 1
+}
+
+article, aside, dialog, figure, footer, header, hgroup, nav, section, blockquote {
+    display: block
+}
+
+nav ul {
+    list-style: none
+}
+
+ol {
+    list-style: decimal
+}
+
+ul {
+    list-style: disc
+}
+
+ul ul {
+    list-style: circle
+}
+
+blockquote, q {
+    quotes: none
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: none
+}
+
+ins {
+    text-decoration: underline
+}
+
+del {
+    text-decoration: line-through
+}
+
+mark {
+    background: none
+}
+
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted #000;
+    cursor: help
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0
+}
+
+input[type=submit], input[type=button], button {
+    margin: 0 !important;
+    padding: 0 !important
+}
+
+input, select, a img {
+    vertical-align: middle
+}
+
+.str_wrap {
+    overflow: hidden;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    position: relative;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    white-space: nowrap
+}
+
+.str_wrap.str_active {
+    background: #f1f1f1
+}
+
+.str_move {
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: move
+}
+
+.str_move_clone {
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    left: 100%;
+    top: 0
+}
+
+.str_vertical .str_move_clone {
+    left: 0;
+    top: 100%
+}
+
+.str_down .str_move_clone {
+    left: 0;
+    bottom: 100%
+}
+
+.str_vertical .str_move, .str_down .str_move {
+    white-space: normal;
+    width: 100%
+}
+
+.str_static .str_move, .no_drag .str_move, .noStop .str_move {
+    cursor: inherit
+}
+
+.str_wrap img {
+    max-width: none !important
+}
+
+body {
+    background: #F2F3F5;
+    min-width: 95%;
+    height: 100%;
+    margin: 0
+}
+
+.conteinerMonitorTable #monitorTable {
+    min-width: 95%;
+    min-height: 70px;
+    height: 100%
+}
+
+.conteinerMonitorTable #monitorTable .header {
+    width: 95%;
+    margin: auto;
+    border-bottom: 4px solid red;
+    height: 60px
+}
+
+.conteinerMonitorTable #monitorTable .header .part {
+    float: left;
+    font-size: 50px;
+    font-family: arial
+}
+
+.conteinerMonitorTable #monitorTable .header .date {
+    margin-left: 0px
+}
+
+.conteinerMonitorTable #monitorTable .header .timer {
+    float: right;
+    margin-right: 0px
+}
+
+.conteinerMonitorTable #monitorTable .header .namequeue {
+    position: absolute;
+    left: 50%;
+    margin-left: -496px
+}
+
+.conteinerMonitorTable #monitorTable .leftPart, .conteinerMonitorTable #monitorTable .rightPart {
+    min-height: 700px
+}
+
+@media screen and (max-width: 1300px) {
+    .conteinerMonitorTable #monitorTable .leftPart, .conteinerMonitorTable #monitorTable .rightPart {
+        min-height: 430px
+    }
+}
+
+.conteinerMonitorTable #monitorTable .leftPart {
+    margin-top: 10px;
+    float: left;
+    width: 50%;
+    position: relative;
+    border-right: 2px solid red;
+    font-size: 36px
+}
+
+.conteinerMonitorTable #monitorTable .leftPart .discription {
+    font-size: 45px;
+    text-align: center;
+}
+
+.conteinerMonitorTable #monitorTable .leftPart .infoAboutActive {
+    margin: auto;
+    width: 750px;
+    margin-top: 10%;
+    color: #07800d
+}
+
+.conteinerMonitorTable #monitorTable .leftPart .infoAboutActive .oneActiveRoom {
+    margin-top: 20px;
+    margin-bottom: 40px
+}
+
+.conteinerMonitorTable #monitorTable .leftPart .infoAboutActive .infoAboutTalon .activeTalon {
+    font-size: 105px;
+    text-align: center
+}
+
+.conteinerMonitorTable #monitorTable .leftPart .infoAboutActive .infoAboutRoom {
+    margin-top: 30px
+}
+
+.conteinerMonitorTable #monitorTable .leftPart .infoAboutActive .infoAboutRoom .discription {
+    font-size: 45px;
+    text-align: center;
+    text-transform: lowercase
+}
+
+.conteinerMonitorTable #monitorTable .leftPart .infoAboutActive .infoAboutRoom .activeRoom {
+    font-size: 90px;
+    text-align: center
+}
+
+.conteinerMonitorTable #monitorTable .rightPart {
+    margin-top: 10px;
+    float: left;
+    width: 50%;
+    position: relative;
+    border-left: 2px solid red;
+    font-size: 36px
+}
+
+.conteinerMonitorTable #monitorTable .rightPart .infoAboutNext {
+    margin: auto;
+    width: 445px;
+    margin-top: 20%
+}
+
+.conteinerMonitorTable #monitorTable .rightPart .infoAboutNext .conteinerForOneNextTalon {
+    width: 590px;
+    font-size: 80px
+}
+
+.conteinerMonitorTable #monitorTable .rightPart .infoAboutNext .conteinerForOneNextTalon .nextTalons {
+    float: left
+}
+
+.conteinerMonitorTable #monitorTable #conteinerForMonitorDoctor {
+    width: 95%;
+    margin: auto
+}
+
+.conteinerMonitorTable #monitorTable #conteinerForMonitorDoctor .testForQueue {
+    position: absolute;
+    top: 70px
+}
+
+.conteinerMonitorTable #monitorTable #conteinerForMonitorDoctor .headerTable .row, .conteinerMonitorTable #monitorTable #conteinerForMonitorDoctor .bodyTable .row {
+    margin-bottom: 15px;
+    border-bottom: 5px dotted #d3d3d3
+}
+
+.conteinerMonitorTable #monitorTable #conteinerForMonitorDoctor .headerTable .row .head, .conteinerMonitorTable #monitorTable #conteinerForMonitorDoctor .bodyTable .row .head {
+    font-size: 80px;
+    text-align: center
+}
+
+.conteinerMonitorTable #monitorTable #conteinerForMonitorDoctor .headerTable .stringactive.head, .conteinerMonitorTable #monitorTable #conteinerForMonitorDoctor .bodyTable .stringactive.head {
+    color: #07800d
+}
+
+.conteinerMonitorTable #monitorTable #conteinerForMonitorDoctor .bodyTable {
+    margin-top: 70px;
+    min-height: 450px
+}
+
+.conteinerMonitorTable #monitorTable #conteinerForMonitorDoctor .bodyTable .notVisible {
+    visibility: hidden
+}
+
+.conteinerMonitorTable #monitorTable #conteinerForMonitorDoctor .bodyTable .rightCol {
+    word-wrap: break-word
+}
+
+@media screen and (min-width: 1400px) {
+    .conteinerMonitorTable #monitorTable #conteinerForMonitorDoctor .bodyTable .rightCol {
+        width: 470px
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .conteinerMonitorTable #monitorTable #conteinerForMonitorDoctor .bodyTable .rightCol {
+        width: 325px
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .conteinerMonitorTable #monitorTable #conteinerForMonitorDoctor .bodyTable .rightCol {
+        width: 30%
+    }
+}
+
+.conteinerMonitorTable #monitorTable #conteinerForMonitorDoctor .bodyTable .conteinerForMonitorWithVideo #videoTest {
+    position: relative;
+    bottom: 60px;
+    margin-bottom: 0px;
+    width: 100%
+}
+
+.conteinerMonitorTable #monitorTable #conteinerForMonitorDoctor #videoTest {
+    position: relative;
+    bottom: 340px
+}
+
+.conteinerMonitorTable #scroller_container {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    margin-top: -50px
+}
+
+.conteinerMonitorTable #runingLine {
+    white-space: nowrap;
+    line-height: 60px;
+    font-size: 72px;
+    font-family: Verdana, Arial, Helvetica, sans-serif
+}
+
+.conteinerMonitorTable .continerForVoice {
+    opacity: 0;
+    position: absolute;
+    top: -1000px
+}
+
+.conteinerMonitorTable .blink2 {
+    color: #ff953d
+}
+
+/*# sourceMappingURL=monitor.css.map */
+.conteinerMonitorTable #monitorTable .rightPart .infoAboutActive .infoAboutRoom {
+    margin-top: 30px;
+}
+
+.conteinerMonitorTable #monitorTable .rightPart .infoAboutActive .infoAboutTalon .activeTalon {
+    font-size: 105px;
+    text-align: center;
+}
+
+.conteinerMonitorTable #monitorTable .rightPart .infoAboutActive .infoAboutRoom .activeRoom {
+    font-size: 90px;
+    text-align: center;
+}
+
+.conteinerMonitorTable #monitorTable .rightPart .discription {
+    font-size: 45px;
+    text-align: center;
+}
+
+.conteinerMonitorTable #monitorTable .rightPart .infoAboutActive {
+    margin: auto;
+    width: 750px;
+    margin-top: 10%;
+    color: #07800d;
+}
+
+.fon {
+    background-image: url(../img/baropenakademy.png);
+    background-color: transparent;
+    position: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 25%;
+    left: 33%;
+    opacity: 0.3;
+}

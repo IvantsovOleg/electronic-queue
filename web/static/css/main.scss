@@ -1,0 +1,1764 @@
+$colorBottom: #efd158;
+
+.orangeButtom {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, $colorBottom), color-stop(1, $colorBottom));
+  background: -moz-linear-gradient(center top, $colorBottom 5%, $colorBottom 100%);
+  background-color: $colorBottom;
+}
+
+.classButtom {
+  -moz-box-shadow: inset 0px -1px 0px 0px #967543;
+  -webkit-box-shadow: inset 0px -1px 0px 0px #967543;
+  box-shadow: inset 0px -3px 0px 0px #967543, inset 0px 3px 0px 0px #ebf8d3;
+  /* background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, $colorBottom), color-stop(1, $colorBottom));
+   background: -moz-linear-gradient(center top, $colorBottom 5%, $colorBottom 100%);
+   background-color: $colorBottom;*/
+  /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$colorBottom', endColorstr='$colorBottom');*/
+  -webkit-border-top-left-radius: 7px;
+  -moz-border-radius-topleft: 7px;
+  border-top-left-radius: 7px;
+  -webkit-border-top-right-radius: 7px;
+  -moz-border-radius-topright: 7px;
+  border-top-right-radius: 7px;
+  -webkit-border-bottom-right-radius: 7px;
+  -moz-border-radius-bottomright: 7px;
+  border-bottom-right-radius: 7px;
+  -webkit-border-bottom-left-radius: 7px;
+  -moz-border-radius-bottomleft: 7px;
+  border-bottom-left-radius: 7px;
+  text-indent: 0px;
+  display: inline-block;
+  color: #1c2a00;
+  height: 70px;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 1px 1px 0 white;
+  /*width: 500px;*/
+  /* new */
+  font: 29pt Calibri;
+  /* font: 30pt Calibri; */
+
+  line-height: 66px;
+  padding: 0px 10px 0px 10px;
+  &:hover {
+    text-decoration: none;
+    color: #1c2a00;
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #8cb1c5), color-stop(1, #8cb1c5));
+    background: -moz-linear-gradient(center top, #8cb1c5 5%, #8cb1c5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8cb1c5', endColorstr='#8cb1c5');
+    box-shadow: inset 0px -3px 0px 0px #ebf8d3, inset 0px 3px 0px 0px #967543;
+    background-color: #8cb1c5;
+    color: #000000;
+  }
+}
+
+.contentMainPage {
+
+  margin-top: 50px;
+  .conteinerFotButtom {
+    p {
+      text-align: right;
+      margin: 0 0 15px;
+    }
+    .classButtom {
+      /* text-align: right;*/
+    }
+  }
+  .conteinerForImgHome {
+    position: absolute;
+    top: 5px;
+    left: 65px;
+    img {
+
+    }
+
+  }
+  .conteinerForInstruction {
+    width: 480px;
+    position: absolute;
+    top: 350px;
+    left: 99px;
+    font-family: Calibri;
+    font-size: 25px;
+    font-weight: bold;
+    color: #1c2a00;
+
+    .text {
+      text-align: justify;
+      text-shadow: 1px 1px 0 white;
+    }
+
+  }
+}
+
+#printTalonPage {
+  .conteinerForButtom {
+    display: block;
+    width: 543px;
+    margin: auto;
+    margin-left: 380px;
+    position: absolute;
+    top: 150px;
+    p {
+      text-align: center;
+      margin: 0 0 15px;
+    }
+    .classButtom {
+      /* text-align: right;*/
+    }
+    .printFakeButtom {
+      opacity: 0;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      top: 2000px;
+    }
+    #back {
+      @extend .orangeButtom;
+    }
+
+  }
+  .discriptionGoodPrint {
+    width: 1280px;
+    margin-top: 100px;
+    .dinamicWords, .staticWords {
+      font-family: Calibri;
+      font-size: 25px;
+      font-weight: bold;
+      text-shadow: 1px 1px 0 white;
+    }
+
+    .dinamicWords {
+      text-align: center;
+      font-size: 32px;
+    }
+    .staticWords {
+      text-align: center;
+    }
+  }
+}
+
+.site-error {
+
+}
+
+/*  ---------------------------------------- */
+/* =====================================	КИОСК 	===================================== */
+/* Общее */
+
+html {
+/*
+  width: 1024px;
+  height: 900px;
+  */
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  /*
+  background: url('../img/bg.png');
+  background-repeat: no-repeat;
+  */
+}
+
+@media print {
+  #for_print >, .print_b > {
+    * {
+      display: none;
+    }
+    div {
+      display: block;
+    }
+  }
+}
+
+/* ajax-ожидание */
+
+div {
+  &.ajaxwait {
+    position: fixed;
+    z-index: 600;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.4;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+  }
+  &.ajaxwait_image {
+    position: fixed;
+    z-index: 601;
+    width: 100%;
+    height: 100%;
+    img {
+      position: relative;
+      top: 33%;
+      left: 50%;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      user-select: none;
+      z-index: 600;
+    }
+  }
+}
+
+/* подсказка для пациента */
+
+.helper_for_patient {
+  border: 4px solid white;
+  padding: 10px;
+  font: bold 11pt Verdana;
+}
+
+/* Заголовок */
+
+.header {
+  display: block;
+  position: relative;
+  width: 1100px;
+  top: 0px;
+  height: 126px;
+}
+
+.center_header {
+  position: relative;
+  top: 31px;
+  left: 100px;
+  text-align: center;
+  text-shadow: white 2px 2px 0px;
+  color: #04375a;
+  .head_name {
+    position: relative;
+    .first_part {
+      font: bold 20pt Calibri;
+    }
+    .second_part {
+      font: bold 25pt Calibri;
+    }
+
+  }
+
+}
+
+.home_n_back_buttons {
+  display: inline;
+  position: absolute;
+  width: 400px;
+  top: 31px;
+}
+
+.side_header {
+  display: inline;
+  position: relative;
+  top: 31px;
+  float: right;
+  margin-right: 77px;
+  text-shadow: white 2px 2px 0px;
+  font: bold 40pt Calibri;
+  color: #04375a;
+  span {
+    left: 100px;
+  }
+}
+
+.hhome {
+  display: inline-block;
+  position: absolute;
+  width: 44px;
+  height: 71px;
+  left: 270px;
+  padding: 0px;
+  background: url('../img/buttons/01_BH_1px.png');
+  background-repeat: repeat-x;
+  &:before {
+    content: url('../img/buttons/01_BH_left.png');
+    position: absolute;
+    left: -12px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/01_BH_right.png');
+    position: absolute;
+    left: 44px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+}
+
+/* нажатая кнопка "Домой" */
+
+.hhome_press {
+  display: inline;
+  position: absolute;
+  width: 44px;
+  height: 71px;
+  left: 270px;
+  padding: 0px;
+  background: url('../img/buttons/01_inBH_1px.png');
+  background-repeat: repeat-x;
+  &:before {
+    content: url('../img/buttons/01_inBH_left.png');
+    position: absolute;
+    left: -12px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/01_inBH_right.png');
+    position: absolute;
+    left: 44px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+}
+
+.hhome_img {
+  position: relative;
+  z-index: 9;
+  margin: 10px 0px 0px 7px;
+  left: -12px;
+}
+
+.hback {
+  display: inline-block;
+  position: absolute;
+  left: 40px;
+  width: 179px;
+  height: 71px;
+  background: url('../img/buttons/01_BH_1px.png');
+  background-repeat: repeat-x;
+  &:before {
+    content: url('../img/buttons/01_BH_left.png');
+    position: absolute;
+    width: 12px;
+    left: -10px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/01_BH_right.png');
+    position: absolute;
+    top: 0px;
+    left: 179px;
+    width: 12px;
+    background-repeat: no-repeat;
+  }
+}
+
+/* нажатая кнопка "Назад" */
+
+.hback_press {
+  display: inline-block;
+  position: absolute;
+  left: 40px;
+  width: 179px;
+  height: 71px;
+  background: url('../img/buttons/01_inBH_1px.png');
+  background-repeat: repeat-x;
+  &:before {
+    content: url('../img/buttons/01_inBH_left.png');
+    position: absolute;
+    width: 12px;
+    left: -10px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/01_inBH_right.png');
+    position: absolute;
+    top: 0px;
+    left: 179px;
+    width: 12px;
+    background-repeat: no-repeat;
+  }
+}
+
+.hback_img_ar, .hback_img_b {
+  position: relative;
+  z-index: 9;
+}
+
+.hback_img_ar {
+  left: 6px;
+  top: 14px;
+}
+
+.hback_img_b {
+  left: 20px;
+  top: 10px;
+  margin-right: 35px;
+}
+
+/* Содержательная часть */
+
+.content {
+  display: block;
+  position: relative;
+  width: 1200px;
+  /* top: 126px; */
+  height: 825px;
+  .buttomBack {
+    position: absolute;
+    top: -90px;
+    left: 15px;
+    &:active {
+      position: absolute;
+      top: -90px;
+      left: 15px;
+    }
+
+  }
+}
+
+/*
+.content {
+  display: inline;
+  position: absolute;
+  width: 1100px;
+  top: 126px;
+  height: 825px;
+}*/
+
+/*.left_side {
+  position: absolute;
+  left: 165px;
+  top: 200px;
+}*/
+
+.right_side {
+  position: absolute;
+  left: 530px;
+  top: 100px;
+}
+
+.yellow_button {
+  position: relative;
+  height: 71px;
+  width: 501px;
+  text-align: center;
+  text-shadow: white 1px 1px 0px;
+  font: Normal 30pt Calibri;
+  color: #1c2a00;
+  background: url('../img/buttons/02_Main_1px.png');
+  background-repeat: repeat-x;
+  span {
+    position: relative;
+    top: 10px;
+    height: 71px;
+  }
+  &:before {
+    content: url('../img/buttons/02_Main_left.png');
+    position: absolute;
+    left: -12px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/02_Main_right.png');
+    position: absolute;
+    left: 501px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+}
+
+/* нажатие */
+
+.yellow_button_press {
+  position: relative;
+  height: 71px;
+  width: 501px;
+  text-align: center;
+  text-shadow: white 1px 1px 0px;
+  font: Normal 30pt Calibri;
+  color: #1c2a00;
+  background: url('../img/buttons/02_inMain_1px.png');
+  background-repeat: repeat-x;
+  span {
+    position: relative;
+    top: 13px;
+    height: 71px;
+  }
+  &:before {
+    content: url('../img/buttons/02_inMain_left.png');
+    position: absolute;
+    left: -12px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/02_inMain_right.png');
+    position: absolute;
+    left: 501px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+}
+
+ul.main_menu {
+  display: inline-block;
+  list-style: none;
+  li {
+    margin: 20px;
+  }
+}
+
+/* Запись пациента */
+
+.user_rec_block {
+  position: relative;
+  top: 20px;
+  width: 1280px;
+  height: 320px;
+  margin-bottom: 30px;
+}
+
+.selected_tr {
+  background: #8cb1c5;
+}
+
+.user_rec_block_table {
+  position: relative;
+  width: 95%;
+  height: 100%;
+  border: none;
+  border-collapse: collapse;
+  .numberDirection{
+   visibility: hidden;
+  }
+  tr {
+    height: 70px;
+  }
+  td {
+    padding: 0px;
+  }
+  /*.infoTr{
+    width: 100%;
+    td{
+      width: 100%;
+      span{
+
+      }
+    }
+  }*/
+  span {
+    position: relative;
+    left: 110px;
+    font: Normal 30pt Verdana;
+    color: black;
+    text-shadow: white 1px 1px 0px;
+    font-size: 26px;
+  }
+  input[type='text'] {
+    position: relative;
+    left: 35px;
+    border-top: 2px solid #264d5f;
+    border-right: 2px solid #84b6cc;
+    border-bottom: 2px solid #84b6cc;
+    border-left: 2px solid #264d5f;
+    height: 50px;
+    width: 600px;
+    font: normal 30pt Verdana;
+  }
+}
+
+.keyboard {
+  position: relative;
+  width: 1280px;
+}
+
+.keyboard_table_rus, .keyboard_table_lat, .keyboard_control_buttons {
+  position: relative;
+  left: 100px;
+}
+
+.keyboard_table_rus td {
+  padding: 5px 12px;
+}
+
+.keyboard_table_lat td, .kb_con td {
+  padding: 5px 13px;
+}
+
+.keyboard_control_buttons {
+  display: inline-block;
+  position: relative;
+  left: 110px;
+  top: 10px;
+  div {
+    display: inline;
+    margin-right: 10px;
+  }
+}
+
+.kb_con {
+  position: relative;
+  left: 100px;
+}
+
+.key_green_button {
+  position: relative;
+  height: 71px;
+  width: 47px;
+  text-align: center;
+  text-shadow: white 1px 1px 0px;
+  font: Normal 30pt Calibri;
+  color: #1c2a00;
+  background: url('../img/buttons/02_inMain_1px.png');
+  background-repeat: repeat-x;
+  &:before {
+    content: url('../img/buttons/02_inMain_left.png');
+    position: absolute;
+    left: -12px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/02_inMain_right.png');
+    position: absolute;
+    left: 47px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+  span {
+    position: relative;
+    top: 12px;
+  }
+}
+
+.key_yellow_button {
+  @extend .classButtom;
+  @extend .orangeButtom;
+  position: relative;
+  height: 71px;
+  width: 65px;
+  text-align: center;
+  text-shadow: white 1px 1px 0px;
+  font: Normal 30pt Calibri;
+  color: #1c2a00;
+  background-repeat: repeat-x;
+  span {
+    position: relative;
+    top: 10px;
+  }
+}
+
+.probel {
+  font: Normal 20pt Calibri;
+  width: 138px;
+  span {
+    position: relative;
+    top: 15px;
+  }
+}
+
+.latin span {
+  position: relative;
+  top: 15px;
+}
+
+.probel:after {
+  position: absolute;
+  left: 138px;
+  top: 0px;
+  background-repeat: no-repeat;
+}
+
+.latin {
+  font: Normal 20pt Calibri;
+}
+
+.probel_green {
+  font: Normal 20pt Calibri;
+  width: 138px;
+  &:after {
+    position: absolute;
+    left: 138px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+}
+
+.latin_green {
+  font: Normal 20pt Calibri;
+  width: 47px;
+  &:after {
+    position: absolute;
+    left: 47px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+  span {
+    position: relative;
+    top: 17px;
+  }
+}
+
+.probel_green span {
+  position: relative;
+  top: 17px;
+}
+
+.backspace {
+  position: relative;
+  left: 127px;
+  top: 15px;
+  text-align: center;
+  /*text-shadow: white 1px 1px 0px;*/
+  font: Normal 30pt Calibri;
+  line-height: 1.6;
+  color: #1c2a00;
+  @extend .classButtom;
+  @extend .orangeButtom;
+  &:active {
+    top: 16px;
+  }
+
+  span {
+    position: relative;
+    top: 10px;
+  }
+}
+
+.backspace_green {
+  position: relative;
+  left: 1020px;
+  top: -65px;
+  width: 130px;
+  height: 71px;
+  text-align: center;
+  text-shadow: white 1px 1px 0px;
+  font: Normal 30pt Calibri;
+  color: #1c2a00;
+  background: url('../img/buttons/02_inMain_1px.png');
+  background-repeat: repeat-x;
+  &:before {
+    content: url('../img/buttons/02_inMain_left.png');
+    position: absolute;
+    left: -12px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/02_inMain_right.png');
+    position: absolute;
+    left: 130px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+  span {
+    position: relative;
+    top: 12px;
+  }
+}
+
+/* таблица с количествами номерков */
+
+.count_numbs_yellow {
+  display: inline-block;
+  position: relative;
+  width: 180px;
+  height: 71px;
+  text-align: center;
+  text-shadow: white 1px 1px 0px;
+  font: Bold 20pt Calibri;
+  color: #1c2a00;
+  background: url('../img/buttons/02_Main_1px.png');
+  background-repeat: repeat-x;
+  float: right;
+  margin-right: 20px;
+  &:before {
+    content: url('../img/buttons/02_Main_left.png');
+    position: absolute;
+    left: -12px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/02_Main_right.png');
+    position: absolute;
+    top: 0px;
+    left: 180px;
+    background-repeat: no-repeat;
+  }
+  span {
+    position: relative;
+    top: 17px;
+  }
+}
+
+.count_numbs_green {
+  display: inline-block;
+  position: relative;
+  width: 180px;
+  height: 71px;
+  text-align: center;
+  text-shadow: white 1px 1px 0px;
+  font: Bold 20pt Calibri;
+  color: #1c2a00;
+  background: url('../img/buttons/02_inMain_1px.png');
+  background-repeat: repeat-x;
+  float: right;
+  margin-right: 20px;
+  &:before {
+    content: url('../img/buttons/02_inMain_left.png');
+    position: absolute;
+    left: -12px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/02_inMain_right.png');
+    position: absolute;
+    left: 180px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+  span {
+    position: relative;
+    font: Bold 20pt Calibri;
+    color: #1c2a00;
+    top: 20px;
+  }
+}
+
+/* время приема врачей */
+
+.doctors_time {
+  display: inline-block;
+  position: relative;
+  left: 150px;
+  top: 35px;
+  width: 1000px;
+}
+
+.days_block {
+  display: inline;
+  position: relative;
+  width: 100%;
+}
+
+/* недели, строки */
+
+.weeks {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+  top: 15px;
+}
+
+/*  дни, "кубики"  */
+
+.day_params {
+  display: inline;
+  position: relative;
+}
+
+.dt_params {
+  display: inline-block;
+  position: relative;
+  width: 120px;
+  height: 100px;
+  margin-right: 15px;
+  text-align: center;
+  border: 2px solid #b7cee1;
+  span {
+    display: block;
+  }
+}
+
+/* полностью пустой день, день другого месяца */
+
+.empty_day {
+  background: url('../img/other_month.png');
+}
+
+/* пустой день этого месяца, диапазон 00:00-00:00 */
+
+.no_recept {
+  background: url('../img/cross.png');
+}
+
+/* выходной день */
+
+.output_day {
+  background: #fffbd0;
+}
+
+/* приемный	день */
+
+.recepting {
+  background: #ffffff;
+}
+
+.dt_datestr {
+  position: relative;
+  top: 10px;
+  font: bold 13pt Calibri;
+  color: #0c3d5f;
+}
+
+.dt_dayweek {
+  position: relative;
+  top: 5px;
+  font: normal 12pt Calibri;
+  color: #0c3d5f;
+}
+
+.dt_range {
+  position: relative;
+  top: 28px;
+  font: normal 14pt Tahoma;
+  /* inpact */
+  color: #0c3d5f;
+}
+
+/* таблица прейскуранта */
+
+.prices {
+  position: relative;
+  left: 100px;
+  top: 40px;
+  width: 850px;
+}
+
+.price_block ul {
+  position: relative;
+  top: 50px;
+  padding: 0px;
+}
+
+/* разделы */
+
+.mainsection_price {
+  position: relative;
+  height: 71px;
+  width: 801px;
+  text-shadow: white 1px 1px 0px;
+  font: Normal 30pt Calibri;
+  color: #1c2a00;
+  background: url('../img/buttons/02_Main_1px.png');
+  background-repeat: repeat-x;
+  &:before {
+    content: url('../img/buttons/02_Main_left.png');
+    position: absolute;
+    left: -12px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/02_Main_right.png');
+    position: absolute;
+    left: 801px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+  span {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    height: 71px;
+  }
+}
+
+.mainsection_price_in {
+  position: relative;
+  height: 71px;
+  width: 801px;
+  margin-top: 20px;
+  text-shadow: white 1px 1px 0px;
+  font: Normal 30pt Calibri;
+  color: #1c2a00;
+  background: url('../img/buttons/02_inMain_1px.png');
+  background-repeat: repeat-x;
+  &:before {
+    content: url('../img/buttons/02_inMain_left.png');
+    position: absolute;
+    left: -12px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/02_inMain_right.png');
+    position: absolute;
+    left: 801px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+  span {
+    position: relative;
+    top: 13px;
+    left: 20px;
+    height: 71px;
+  }
+}
+
+/* подразделы */
+
+.li_tabs {
+  position: relative;
+  height: 71px;
+  width: 801px;
+  margin-top: 20px;
+  text-shadow: white 1px 1px 0px;
+  font: Normal 20pt Calibri;
+  color: #1c2a00;
+  background: url('../img/buttons/02_Main_1px.png');
+  background-repeat: repeat-x;
+  &:before {
+    content: url('../img/buttons/02_Main_left.png');
+    position: absolute;
+    left: -12px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/02_Main_right.png');
+    position: absolute;
+    top: 0px;
+    left: 801px;
+    background-repeat: no-repeat;
+  }
+  span {
+    position: relative;
+    top: 15px;
+    height: 71px;
+  }
+}
+
+.li_tabs_in {
+  position: relative;
+  height: 71px;
+  width: 801px;
+  margin-top: 20px;
+  text-shadow: white 1px 1px 0px;
+  font: Normal 20pt Calibri;
+  color: #1c2a00;
+  background: url('../img/buttons/02_inMain_1px.png');
+  background-repeat: repeat-x;
+  &:before {
+    content: url('../img/buttons/02_inMain_left.png');
+    position: absolute;
+    left: -12px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/02_inMain_right.png');
+    position: absolute;
+    top: 0px;
+    left: 801px;
+    background-repeat: no-repeat;
+  }
+  span {
+    position: relative;
+    top: 18px;
+    height: 71px;
+    left: 100px;
+  }
+}
+
+/* услуги */
+
+.services_list {
+  position: relative;
+  top: 51px;
+  width: 100%;
+  border-collapse: collapse;
+  tr {
+  }
+}
+
+span {
+  &.service_name {
+    position: relative;
+    margin: 10px;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 20pt;
+    color: #04375a;
+  }
+  &.service_price {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18pt;
+    color: #04375a;
+  }
+}
+
+/* ==========  */
+
+.numbers {
+  display: inline-block;
+  position: relative;
+  left: 100px;
+  top: 40px;
+  width: 850px;
+}
+
+.docname_num, .nums_datastr {
+  font: Bold 24pt Calibri;
+  color: #04375a;
+}
+
+.specname_num {
+  font: Normal 24pt Calibri;
+  color: #04375a;
+}
+
+.numbers_free_time {
+  position: relative;
+  top: 70px;
+  width: 105%;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  border: 2px solid white;
+  tr {
+    background: white;
+    padding: 10px;
+  }
+  td {
+    height: 90px;
+    padding-left: 15px;
+  }
+}
+
+.nums_dayweek, .nums_range {
+  font: Normal 18pt Tahoma;
+  color: #04375a;
+}
+
+/* стрелки "ВВЕРХ" и "ВНИЗ" в активном (главном) виде */
+
+.scroll_arrows {
+  position: absolute;
+  left: 970px;
+  top: 50px;
+  width: 90px;
+  height: 800px;
+}
+
+.scroll_arrow_up, .scroll_arrow_down {
+  position: relative;
+  width: 59px;
+  height: 71px;
+  background: url('../img/buttons/moreless/ml_1px.png');
+  background-repeat: repeat-x;
+}
+
+.scroll_arrow_up img, .scroll_arrow_down img {
+  position: relative;
+  z-index: 9;
+  left: 10px;
+  top: 22px;
+}
+
+.scroll_arrow_up:before, .scroll_arrow_down:before {
+  content: url('../img/buttons/moreless/ml_left.png');
+  position: absolute;
+  left: -12px;
+  background-repeat: no-repeat;
+}
+
+.scroll_arrow_up:after {
+  content: url('../img/buttons/moreless/ml_right.png');
+  position: absolute;
+  left: 59px;
+  top: 0px;
+  background-repeat: no-repeat;
+}
+
+.scroll_arrow_down {
+  &:after {
+    content: url('../img/buttons/moreless/ml_right.png');
+    position: absolute;
+    left: 59px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+  top: 530px;
+}
+
+/* стрелки ВВЕРХ и ВНИЗ в неактивном и нажатом виде */
+/* неактивные: */
+
+.scroll_arrow_up_x, .scroll_arrow_down_x {
+  position: relative;
+  width: 59px;
+  height: 71px;
+  background: url('../img/buttons/moreless/ml_1px_x.png');
+  background-repeat: repeat-x;
+}
+
+.scroll_arrow_up_x img, .scroll_arrow_down_x img {
+  position: relative;
+  z-index: 9;
+  left: 10px;
+  top: 22px;
+}
+
+.scroll_arrow_up_x:before, .scroll_arrow_down_x:before {
+  content: url('../img/buttons/moreless/ml_left_x.png');
+  position: absolute;
+  left: -12px;
+  background-repeat: no-repeat;
+}
+
+.scroll_arrow_up_x:after {
+  content: url('../img/buttons/moreless/ml_right_x.png');
+  position: absolute;
+  left: 59px;
+  top: 0px;
+  background-repeat: no-repeat;
+}
+
+.scroll_arrow_down_x {
+  &:after {
+    content: url('../img/buttons/moreless/ml_right_x.png');
+    position: absolute;
+    left: 59px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+  top: 530px;
+}
+
+/* нажатые */
+
+.scroll_arrow_up_in, .scroll_arrow_down_in {
+  position: relative;
+  width: 59px;
+  height: 71px;
+  background: url('../img/buttons/moreless/ml_1px_in.png');
+  background-repeat: repeat-x;
+}
+
+.scroll_arrow_up_in img, .scroll_arrow_down_in img {
+  position: relative;
+  z-index: 9;
+  left: 10px;
+  top: 22px;
+}
+
+.scroll_arrow_up_in:before, .scroll_arrow_down_in:before {
+  content: url('../img/buttons/moreless/ml_left_in.png');
+  position: absolute;
+  left: -12px;
+  background-repeat: no-repeat;
+}
+
+.scroll_arrow_up_in:after {
+  content: url('../img/buttons/moreless/ml_right_in.png');
+  position: absolute;
+  left: 59px;
+  top: 0px;
+  background-repeat: no-repeat;
+}
+
+.scroll_arrow_down_in {
+  &:after {
+    content: url('../img/buttons/moreless/ml_right_in.png');
+    position: absolute;
+    left: 59px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+  top: 530px;
+}
+
+/* ==== */
+
+/* список самих номерков */
+
+#numtimes {
+  width: 1050px;
+}
+
+.numbers_freetime_list {
+  position: relative;
+  top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+  tr {
+    background: white;
+    height: 50px;
+  }
+  span {
+    position: relative;
+    left: 15px;
+  }
+}
+
+.free_times_list {
+  position: relative;
+  top: 50px;
+}
+
+.times_numbs_yellow {
+  display: inline-block;
+  position: relative;
+  width: 110px;
+  height: 71px;
+  text-align: center;
+  text-shadow: white 1px 1px 0px;
+  font: Bold 20pt Calibri;
+  color: #1c2a00;
+  background: url('../img/buttons/02_Main_1px.png');
+  background-repeat: repeat-x;
+  margin-left: 15px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  &:before {
+    content: url('../img/buttons/02_Main_left.png');
+    position: absolute;
+    left: -12px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/02_Main_right.png');
+    position: absolute;
+    left: 110px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+  span {
+    position: relative;
+    top: 17px;
+  }
+}
+
+/* номерок нажат */
+
+.times_numbs_green {
+  display: inline-block;
+  position: relative;
+  width: 110px;
+  height: 71px;
+  text-align: center;
+  text-shadow: white 1px 1px 0px;
+  font: Bold 20pt Calibri;
+  color: #1c2a00;
+  background: url('../img/buttons/02_inMain_1px.png');
+  background-repeat: repeat-x;
+  margin-left: 15px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  &:before {
+    content: url('../img/buttons/02_inMain_left.png');
+    position: absolute;
+    left: -12px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/02_inMain_right.png');
+    position: absolute;
+    left: 110px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+  span {
+    position: relative;
+    top: 20px;
+  }
+}
+
+/* запись */
+
+.confirm {
+  position: relative;
+  width: 800px;
+  left: 100px;
+  top: 100px;
+}
+
+span.your_num {
+  position: relative;
+  left: 400px;
+}
+
+table.num_confirm {
+  position: relative;
+  width: 100%;
+  left: 100px;
+  top: 50px;
+  tr {
+    background: white;
+    height: 50px;
+  }
+  td {
+    width: 50%;
+    padding-left: 15px;
+  }
+}
+
+.confirm_button {
+  position: relative;
+  top: 100px;
+  left: 250px;
+}
+
+.success_confirm {
+  position: relative;
+  width: 800px;
+  left: 250px;
+  top: 150px;
+}
+
+.error_mes {
+  position: relative;
+  width: 700px;
+  left: 250px;
+  top: 150px;
+}
+
+/* кнопки "ВВЕРХ" и "ВНИЗ", показать больше и меньше результатов */
+
+.moreless_up {
+  display: inline-block;
+  position: relative;
+  width: 220px;
+  height: 71px;
+  background: url('../img/buttons/moreless/ml_1px.png');
+  background-repeat: repeat-x;
+}
+
+.moreless_down {
+  display: inline-block;
+  position: relative;
+  width: 220px;
+  height: 71px;
+  background: url('../img/buttons/moreless/ml_1px.png');
+  background-repeat: repeat-x;
+  left: 60px;
+}
+
+.moreless_down_x {
+  left: 60px;
+}
+
+.moreless_up_x, .moreless_down_x {
+  display: inline-block;
+  position: relative;
+  width: 220px;
+  height: 71px;
+  background: url('../img/buttons/moreless/ml_1px_x.png');
+  background-repeat: repeat-x;
+}
+
+/* изображения */
+
+.arr_up, .arr_down {
+  position: relative;
+  left: 15px;
+  top: 20px;
+}
+
+.text_up, .text_down {
+  position: relative;
+  left: 40px;
+  top: 20px;
+}
+
+/* изображения при нажатых кнопках */
+
+.arr_up_in, .arr_down_in {
+  position: relative;
+  left: 15px;
+  top: 24px;
+}
+
+.text_up_in, .text_down_in {
+  position: relative;
+  left: 40px;
+  top: 24px;
+}
+
+.moreless_up:before, .moreless_down:before {
+  content: url('../img/buttons/moreless/ml_left.png');
+  position: absolute;
+  left: -12px;
+  background-repeat: no-repeat;
+}
+
+.moreless_up:after, .moreless_down:after {
+  content: url('../img/buttons/moreless/ml_right.png');
+  position: absolute;
+  left: 220px;
+  top: 0px;
+  background-repeat: no-repeat;
+}
+
+.moreless_up_x:before, .moreless_down_x:before {
+  content: url('../img/buttons/moreless/ml_left_x.png');
+  position: absolute;
+  left: -12px;
+  background-repeat: no-repeat;
+}
+
+.moreless_up_x:after, .moreless_down_x:after {
+  content: url('../img/buttons/moreless/ml_right_x.png');
+  position: absolute;
+  left: 220px;
+  top: 0px;
+  background-repeat: no-repeat;
+}
+
+/* нажатое состояние кнопок "ВВЕРХ" и "ВНИЗ" */
+
+.moreless_up_in, .moreless_down_in {
+  display: inline-block;
+  position: relative;
+  width: 220px;
+  height: 71px;
+  background: url('../img/buttons/moreless/ml_1px_in.png');
+  background-repeat: repeat-x;
+}
+
+.moreless_up_in:before, .moreless_down_in:before {
+  content: url('../img/buttons/moreless/ml_left_in.png');
+  position: absolute;
+  left: -12px;
+  background-repeat: no-repeat;
+}
+
+.moreless_up_in:after {
+  content: url('../img/buttons/moreless/ml_right_in.png');
+  position: absolute;
+  left: 220px;
+  top: 0px;
+  background-repeat: no-repeat;
+}
+
+.moreless_down_in {
+  &:after {
+    content: url('../img/buttons/moreless/ml_right_in.png');
+    position: absolute;
+    left: 220px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+  left: 60px;
+}
+
+/* Подвал */
+
+.footer {
+  display: inline-block;
+  position: absolute;
+  width: 1100px;
+  top: 970px;
+  height: 45px;
+  .logo {
+    display: inline;
+    position: relative;
+    left: 21px;
+    top: 10px;
+  }
+  .footer_policlinic {
+    display: inline;
+    position: relative;
+    float: right;
+    top: 10px;
+    height: 15px;
+    font: Normal 18pt Arial;
+    color: #234c63;
+  }
+}
+
+.footer_policlinic span {
+  text-shadow: white 1px 1px 0px;
+}
+
+/* для модального окна */
+
+#backgroundPopup {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #000000;
+  z-index: 200;
+}
+
+#popupContact {
+  display: none;
+  position: fixed;
+  min-height: 150px;
+  width: 808px;
+  background: #fff8e7;
+  border: 2px solid #b91600;
+  z-index: 201;
+  padding: 12px;
+  font-size: 13px;
+}
+
+.close_modal {
+  position: relative;
+  background: white;
+  float: right;
+  border: 1px solid #fbd8b1;
+}
+
+#name_service {
+  text-align: center;
+  span {
+    position: relative;
+    font: normal 20pt Calibri;
+  }
+}
+
+#price_service {
+  position: relative;
+  text-align: center;
+  margin: 20px;
+  span {
+    font: bold 18pt Verdana;
+    color: #88423d;
+  }
+}
+
+#cond_service {
+  position: relative;
+  left: 20px;
+  text-align: left;
+  margin-bottom: 30px;
+  span {
+    position: relative;
+    font: normal 18pt Calibri;
+  }
+}
+
+/* для печати статталона */
+
+.for_print {
+  position: absolute;
+  border: solid 1px black;
+  width: 592px;
+  height: 840px;
+}
+
+/* общий блок кнопок фильтрации номерков */
+
+.surv_menu {
+  display: inline;
+  position: absolute;
+  top: 30px;
+  left: 350px;
+}
+
+/* активная кнопка фильтра номерков */
+
+.grey {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 71px;
+  padding: 0px;
+  margin: 20px;
+  background: url('../img/buttons/01_ingrey_1px.png');
+  background-repeat: repeat-x;
+  &:before {
+    content: url('../img/buttons/01_ingrey_left.png');
+    position: absolute;
+    left: -12px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/01_ingrey_right.png');
+    position: absolute;
+    left: 200px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+  span {
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    left: 10px;
+    font: Bold 14pt Calibri;
+    color: #1c2a00;
+  }
+}
+
+/* неактивная кнопка из фильтра номерков */
+
+.white {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 71px;
+  padding: 0px;
+  margin: 20px;
+  background: url('../img/buttons/01_inwhiteBH_1px.png');
+  background-repeat: repeat-x;
+  &:before {
+    content: url('../img/buttons/01_inwhiteBH_left.png');
+    position: absolute;
+    left: -12px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: url('../img/buttons/01_inwhiteBH_right.png');
+    position: absolute;
+    left: 200px;
+    top: 0px;
+    background-repeat: no-repeat;
+  }
+  span {
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    left: 15px;
+    font: Bold 14pt Calibri;
+    color: #1c2a00;
+  }
+}
+
+#confirm input[type='button'], .error_data input[type='button'] {
+  position: relative;
+  top: 90px;
+  left: 70px;
+  margin: 30px;
+  width: 170px;
+  height: 70px;
+  font: bold 20pt Calibri;
+}
+
+#confirm span, .error_data span {
+  font: normal 20pt Calibri;
+}
+
+#for_print {
+  display: block;
+  visibility: visible;
+  position: absolute;
+  border: solid 1px black;
+  width: 400px;
+  height: 700px;
+  text-align: center;
+}
+
+/* модальное окно при сообщении об ошибке */
+
+.backg {
+  position: fixed;
+  z-index: 200;
+  background: #000;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.error_data {
+  position: fixed;
+  z-index: 201;
+  left: 270px;
+  top: 100px;
+  background: #fdf7ec;
+  border: solid 3px #912813;
+  width: 700px;
+  height: 350px;
+  padding-right: 20px;
+}

@@ -1,0 +1,13 @@
+﻿/* статталон двусторонний на А5 */
+
+@page :left {
+size: 5.83in 8.27in;
+margin-left: 2cm;
+margin-right: 1cm;
+}
+
+@page :right {
+size: 5.83in 8.27in;
+margin-left: 1cm;
+margin-right: 2cm;
+}

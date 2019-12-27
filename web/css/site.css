@@ -1,0 +1,192 @@
+html {
+    font-family: "Arial";
+}
+body.content {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/*CSS свойства для header*/
+
+.monitor-header {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    height: 12vh;
+    width: 100%;
+    align-items: center;
+    background-color: #e4e9ed;
+    border-bottom: #ffffff 0.6vh solid;
+}
+.header-logo {
+    width: 8.1%;
+    text-align: center;
+}
+
+.header-logo img {
+    width: 7vh;
+}
+
+.header-description {
+    width: 66.5%;
+    text-align: center;
+    font-size: 2.8vw;
+    font-weight: 700;
+    color: #676c6f;
+    padding-right: 3vw;
+}
+.header-date-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    width: 25.4%;
+    height: inherit;
+    background-color: #ee7103;
+    border-bottom: #ffffff 0.6vh solid;
+    border-left: #ffffff 0.5vh solid;
+    color: #000000;
+}
+
+.header-date-time .date-container {
+    text-align: right;
+    padding-right: 1vw;
+    border-right: 0.2vw solid black;
+}
+
+#date {
+    font-size: 1.7vw;
+}
+
+#weekDay {
+    font-size: 1.1vw;
+    color: #fff;
+}
+
+.header-date-time .time-container {
+    text-align: left;
+    font-size: 4vw;
+    padding-left: 1vw;
+    margin-right: 1.41vw;
+}
+
+.monitor-main {
+    height: 88vh;
+    width: 100%;
+    background-color: #686b70;
+    box-sizing: border-box;
+    border-left: 0.2vw solid black;
+    border-right: 0.2vw solid black;
+    border-bottom: 0.2vw solid black;
+}
+
+.monitor-talon-list {
+    height: 76vh;
+    width: 100%;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+#anti-fallout-margin-top::before{
+    content: "";
+    overflow: hidden;
+    display: block;
+}
+
+/*CSS свойства для монитора с расписанием*/
+
+table.shedule {
+    width: 96%;
+    margin: auto;
+    margin-top: 3vh;
+    border: #ffffff solid 0.2vw !important;
+    border-collapse: collapse;
+}
+
+.shedule th, .shedule td {
+    border: #666b6e solid 0.1vw;
+}
+
+thead th {
+    background-color: #ee7103;
+    height: 7.4vh;
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+
+thead th span {
+    color: #fff;
+}
+
+tbody tr.cabinet-name {
+    text-align: center;
+    height: 7.4vh;
+    background-color: #e4e9ed;
+    font-weight: 700;
+    font-size: 2vw;
+    color: #686d70;
+}
+tbody tr.doctor-shedule {
+    height: 7.4vh;
+    background-color: #fff;
+    font-weight: 600;
+    font-size: 1.5vw;
+    text-align: center;
+}
+tbody .doctor-cabinet, tbody .doctor-speciality span {
+    color: #ee7103;
+}
+
+tbody .doctor-speciality {
+    text-align: left;
+    padding-left: 1vw;
+}
+
+/*CSS свойства для монитора с номерками*/
+
+table.talon-list {
+    width: 75vw;
+    margin: auto;
+    text-align: center;
+    font-size: 6vw;
+    font-weight: 700;
+}
+
+.talon-number-odd,
+.talon-number-even {
+    height: 16vh;
+    line-height: 14vh;
+    width: 18vw;
+    margin-top: 1.6vh;
+    border-radius: 2vh;
+}
+
+.talon-row-odd {
+    color: #ed7405;
+}
+
+.talon-row-even {
+    color: #676c6f;
+}
+
+.talon-number-odd {
+    border: solid #ed7405 0.6vw;
+}
+
+.talon-number-even {
+    border: solid #676c6f 0.6vw;
+}
+
+/*CSS свойства для footer*/
+
+#bottomPart {
+    height: 12vh;
+    background-color: #e4e9ed;
+    line-height: 12vh;
+    text-align: center;
+    font-size: 2.8vw;
+    font-weight: 700;
+    color: #676c6f;
+}
